@@ -1,0 +1,47 @@
+[{
+        "_id": 1,
+        "name": "Blog Login Application",
+        "github_link": "https://github.com/MinimalistTraveler/blog-site",
+        "internet_link": "https://private-blog-site.herokuapp.com/",
+        "image": "../../public/images/blog_site.png",
+        "coming_soon": false
+    },
+    {
+        "_id": 2,
+        "name": "Todo List Login Application",
+        "github_link": "https://github.com/MinimalistTraveler/todolist",
+        "internet_link": "https://fathomless-caverns-68122.herokuapp.com/#/",
+        "image": "../../public/images/todolist_app.png",
+        "coming_soon": false
+    },
+    {
+        "_id": 3,
+        "name": "Face Detection",
+        "github_link": "https://github.com/MinimalistTraveler/face-recongition",
+        "internet_link": "https://smart-detection-app.herokuapp.com/",
+        "image": "../../public/images/face_recong.png",
+        "coming_soon": false
+    },
+    {
+        "_id": 4,
+        "name": "Pizza Mania",
+        "github_link": "https://github.com/MinimalistTraveler/pizza-mania",
+        "internet_link": "https://erikbridges.github.io/pizza-mania/#",
+        "image": "../../public/images/pizza_mania.png",
+        "coming_soon": false
+    },
+    {
+        "_id": 5,
+        "name": "Weather Application",
+        "github_link": "",
+        "internet_link": "",
+        "coming_soon": true
+    },
+    {
+        "_id": 6,
+        "name": "Vacation Landing Page",
+        "github_link": "",
+        "internet_link": "",
+        "coming_soon": true
+    }
+]

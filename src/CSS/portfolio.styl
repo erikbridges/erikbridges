@@ -1,0 +1,57 @@
+.portfolio
+    height 100%
+    min-height 100vh
+    background darken(#1b1e21, 40%)
+    display flex
+    flex-wrap wrap
+    justify-content center
+    align-items center
+    font-family "Josefin-Sans", Arial, Helvetica, sans-serif
+    overflow hidden
+.portfolio__header
+    font-size 5rem
+    color #DDD
+    flex 1 100%
+    text-align center
+    margin-top 200px
+    > span
+        display block
+        background #dddddd
+        height 1px
+        width 100px
+        margin 20px auto
+
+.portfolio__list
+    display flex
+    flex-wrap wrap 
+    justify-content center
+    align-items center
+    margin-bottom 150px
+
+
+.portfolio__item
+    flex 50%
+    padding 20px
+    font-size 1.2rem
+    > h2 
+        font-size 1.2rem
+        padding 10px
+        text-transform uppercase
+    > img 
+        display block
+        width 100%
+        height auto
+
+.portfolio__link
+    font-size 2rem
+    > a  
+        color #777
+        padding 10px
+        &:hover 
+            color #CCC
+
+@media screen and (max-width: 968px)
+    .portfolio__list
+        transform: translateX(0px)
+    .portfolio__item
+        flex 100%

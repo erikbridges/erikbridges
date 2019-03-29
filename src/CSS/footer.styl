@@ -1,0 +1,36 @@
+.footer
+    display flex
+    color #DDD
+    font-family "Josefin-Sans", Arial, Helvetica, sans-serif
+    position absolute
+    left 0
+    right 0
+    bottom 0
+    z-index 999
+    padding 20px
+    opacity .8
+    > div 
+        display flex 
+        align-items center
+        p  
+            display grid
+            place-items center
+    > div:nth-child(1)
+        order 2
+    > div:nth-child(2)
+        flex 1 50%
+        order 1
+        
+     
+.footer__social
+    display block
+    > a 
+        margin 10px
+        cursor pointer
+        color #DDD
+        &:hover
+            opacity .5
+
+@media screen and (max-width 968px)
+    .decor
+        display none

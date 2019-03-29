@@ -1,0 +1,78 @@
+@import "./mixins/mixins.styl"
+.main__cover
+    display flex
+    justify-content center
+    align-items center
+    background-image: linear-gradient(to top, #160a0b, #241415, #341a1d, #452125, #56282d);
+    padding 20px
+    height 100vh
+    color #DDD
+    text-align center
+    font-family: "Josefin-Sans", Arial, Helvetica, sans-serif
+.main__content
+    margin-top 100px
+   
+.main__header
+    margin 0 auto
+    width 50%
+    text-align: left
+    animation fadeIn 3s ease-in
+    h1
+        font-size 3.5rem
+        font-weight bolder
+        margin-left 5px
+        font-family "Metropolis", Arial, Helvetica, sans-serif
+        
+        
+    h2 
+        font-weight 300
+        font-size 1.2rem
+        padding 10px
+        font-family "Metropolis", Arial, Helvetica, sans-serif
+    span 
+        height 1px 
+        background #ffffff
+        width 70%
+        display block
+        margin 10px 
+
+.main__body
+    text-align justify
+    line-height 1.5em
+    width 50%
+    margin 20px auto
+    animation: fadeIn 1s ease-in
+    
+
+.main__btn-wrap
+    display flex
+    justify-content center
+    position relative
+    z-index 1
+    a 
+        btnStyle()
+        animation: fadeIn 1s ease-in
+        &:hover 
+            opacity: .5
+        &:active, &:focus
+            animation pulse 1s
+
+@media screen and (max-width 968px)
+    .main__header
+        width 100%
+    .main__body 
+        width 100%
+
+@keyframes pulse 
+  0% 
+    box-shadow: 0 0 0 0 rgba(#555, 0.4);
+  70% 
+      box-shadow: 0 0 0 50px rgba(#000, 0);
+  100% 
+      box-shadow: 0 0 0 0 rgba(#555, 0);
+  
+@keyframes fadeIn 
+    from 
+        opacity 0
+    to  
+        opacity 1

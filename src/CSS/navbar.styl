@@ -1,0 +1,117 @@
+// Desktop Screens Only
+.navbar
+    // background darken(#544343, 50%)
+    display flex
+    justify-content flex-end
+    align-items center
+    z-index 100
+    position absolute
+    left 0
+    right 0
+    > a 
+        text-align: center
+        color #DDD
+        text-decoration none
+        padding 30px
+        font-family "Metropolis", Arial, Helvetica, sans-serif   
+        font-weight 700
+        &:hover
+            color #888
+            transition all .2s
+       
+
+    
+// Mobile Screens Only 
+.navbar__mobile
+    position absolute
+    top 0
+    left 0
+    right 0
+    display flex
+    z-index 100
+    padding 20px
+    width 100%
+.navbar__collapse 
+    display block
+    order 2
+    margin-left auto
+    flex 1 0 1
+    cursor pointer
+    display grid
+    place-items center
+    padding 10px
+    z-index 100
+    &:hover
+        background #555
+        border-radius 10px
+    > span 
+        display block
+        margin 3px 
+        width 20px
+        height 2px
+        background #FFF
+        
+.navbar__wrapper
+    position absolute
+    left 0
+    right 0
+    top 0
+    transform translateX(-1000px)
+    transition transform .7s ease-in
+    order 1
+    flex 1 100%
+    display flex 
+    flex-wrap wrap
+    background #111
+    box-shadow 0px 5px 10px rgba(#000, .5)
+    > a:nth-child(1)
+        margin-top 100px
+    > a
+        flex 100%
+        padding 20px
+        color #dddddd
+        font-family 'Josefin-Light-Sans', Arial, Helvetica, sans-serif
+        text-decoration none
+        font-size 1.5rem
+        font-weight: 200
+        &:hover
+            background  darken(#56282D, 60%)
+
+.navbar__wrapper.active
+     transform translateX(0px)
+     transition transform .7s ease-in
+
+#overlay
+    background rgba(#000, .5)
+    position fixed 
+    top 0
+    left 0
+    right 0 
+    bottom 0
+    transition .2s ease-in
+
+.logo
+    font-family "Metropolis", Arial, Helvetica, sans-serif
+    font-size 2.4rem
+    color #DDD
+    display flex 
+    align-items: center
+    position absolute
+    left 10px
+    top 20px
+    z-index 999
+    > span:nth-child(1)
+        background #CCC
+        font-weight: bolder
+        color #222
+        border-radius 5px
+        padding 20px
+        transform: translateY(-10px)
+    > span:nth-child(2)
+        background darken(#56282D, 80%)
+        padding 10px
+        border-radius 5px
+        z-index 999
+        transform: translate(-20px, 10px)
+        box-shadow 0px 0px 10px rgba(#000, .5)
+        

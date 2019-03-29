@@ -1,0 +1,175 @@
+@import "./mixins/mixins.styl"
+.contact 
+    height 100%
+    min-height 100vh
+    overflow hidden
+    background black
+    color #FFF
+    align-items center
+    justify-content center
+    font-family "Josefin-Sans", Arial, Helvetica, sans-serif
+    > div:nth-child(1)
+        flex 1 100%
+        h1 
+            font-size 2.5rem
+            padding 20px
+
+
+.flex__area
+    display flex
+    justify-content center
+    height auto
+    flex-wrap wrap
+
+
+.contact__header
+    display flex
+    flex 1 50%
+    align-items center
+    justify-content center
+    background #56282D
+    position relative
+    padding 20px
+    flex-wrap wrap
+    text-align center
+    > h2
+        flex 1 100%
+        font-size 3rem
+        text-transform uppercase
+    > a
+        display grid
+        place-items center
+        color #DDD
+        font-size 5rem
+        cursor pointer
+        position relative
+        top -250px
+        transition opacity .2s ease-in
+        height 150px
+        width 150px
+        border-radius 100px
+        background #222
+        animation pulse 4s
+        animation-iteration-count infinite
+        font-size 4rem
+        &:hover
+            opacity .5
+            transition opacity .2s ease-in
+
+.decor
+    display flex
+    position absolute
+    bottom 50px
+    right -20px
+    > h2 
+        transform rotate(270deg) translateX(300px) translateY(145px)
+        letter-spacing 20px
+    > a
+        padding-bottom 30px
+        flex 100%
+        
+.contact__form
+    display flex
+    flex 1 50%
+    background #26282D
+    align-items center
+    justify-content center
+    padding 20px
+    height 100%
+    min-height 100vh
+    line-height 1.5em
+    order 2
+    > form 
+        display flex 
+        flex-wrap wrap
+        flex 100%
+        margin-top 60px
+        margin-bottom 100px
+.form__title
+    padding 20px
+    > h2 
+        padding 10px 0px
+.form__wrap
+    display flex 
+    flex 100%
+    flex-wrap wrap
+    padding 20px
+    > label 
+        flex 50%
+        padding-bottom 10px
+    > input 
+        flex 100%
+        padding 15px
+        font-family "Josefin-Sans", Arial, Helvetica, sans-serif
+        border 1px solid #DDD
+        box-shadow inset 0 1px 1px rgba(0,0,0,.075)
+        &:focus
+            outline none 
+            border-color #66afe9
+            transition border-color ease-in-out .15s,box-shadow ease-in-out .15s
+    > textarea
+        flex 100%
+        border-radius  5px
+        padding 20px
+        font-family "Josefin-Sans", Arial, Helvetica, sans-serif
+        height 200px
+        resize none
+    
+.form__btn
+     > button 
+        margin-left 20px
+        btnStyle()
+        &:hover
+            opacity .5
+        &:active, &:focus
+            animation pulse 1s
+
+.error 
+    border 0.75px solid darken(red, 50%) !important 
+    background lighten(red, 90%)
+.error-box 
+    color lighten(red, 30%)
+    padding 10px 2px   
+@media screen and (max-width 968px)
+    .form__btn
+        display block
+        margin 0 auto
+        > button
+            display block
+            margin 10px auto
+            width 300px
+    .contact__header
+        order 2
+        height 300px
+        > h2
+            font-size 2rem
+            margin-top 80px
+        > a 
+            top 0px
+            width 100px 
+            height 100px
+            font-size 1.7rem
+    .contact__form
+        flex 100%
+    .decor
+        position absolute
+        left 20%
+        bottom 0px
+        z-index 999
+        > h2
+            position relative 
+            left 5%
+            transform translateX(0%) translateY(-170px)
+            letter-spacing 20px
+
+@keyframes pulse 
+  0% 
+    box-shadow 0 0 0 0 rgba(#555, 0.4);
+  70% 
+      box-shadow 0 0 0 50px rgba(#000, 0);
+  100% 
+      box-shadow 0 0 0 0 rgba(#555, 0);
+  
+@media screen and (max-width 968px)
+    .decor
+        display none
