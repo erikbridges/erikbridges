@@ -7,7 +7,6 @@ import {
   faJsSquare,
   faReact,
   faNodeJs,
-  faPython,
   faGit
 } from "@fortawesome/free-brands-svg-icons";
 import { faPaintBrush, faBrain } from "@fortawesome/free-solid-svg-icons";
@@ -67,7 +66,7 @@ function About() {
                         />
                       </span>
                       <span>
-                        <h2>Html 5</h2>
+                        <h2>HTML 5</h2>
                       </span>
                     </li>
                     <li>
@@ -173,23 +172,12 @@ function About() {
                     <li>
                       <span className={styles["skills__icon"]}>
                         <FontAwesomeIcon
-                          icon={faPython}
-                          className={styles["python"]}
+                          icon={faNodeJs}
+                          className={styles["nodejs"]}
                         />
                       </span>
                       <span>
-                        <h2>Django</h2>
-                      </span>
-                    </li>
-                    <li>
-                      <span className={styles["skills__icon"]}>
-                        <FontAwesomeIcon
-                          icon={faPython}
-                          className={styles["python"]}
-                        />
-                      </span>
-                      <span>
-                        <h2>Python 3</h2>
+                        <h2>Restify Framework</h2>
                       </span>
                     </li>
                   </ul>
