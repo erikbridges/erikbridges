@@ -26,25 +26,22 @@ function About() {
       </div>
       <article className={styles["about__content"]}>
         <section className={styles["intro"]}>
-          <h1 className={styles["about__title"]}>Short History Background</h1>
           <p>
-            Hi, and welcome! My name is Erik, and I am glad that you have given
-            me an opportunity to share my story with you. It all started
-            literally from hard work to be honest with you. The journey began in
-            2016 when I decided to make this move as a full stack web developer
-            out of inspiration. I like the fact that being a web developer you
-            can practically create just about anything. At the time I was
-            looking for a new way of expressing my creativity and showcasing it.
-            I just didn’t know what field would do. There where a lot of choices
-            out there. After I did my research and homework I realized that this
-            is it. This is what I want to do. Since then I continue to practice.
+            Hi, and welcome! My name is Erik, I am a full stack web developer.
+            Here is a brief history about who I am. The journey began in 2016
+            when I decided to make this move as a full stack web developer out
+            of inspiration. I like the fact that being a web developer you can
+            practically create just about anything. At the time I was looking
+            for a new way of expressing my creativity and showcasing it. I just
+            didn’t know what field would do. There where a lot of choices out
+            there. After I did my research and homework I realized that this is
+            it. This is what I want to do. Since then I continue to practice.
             Even to this day I still practice. It wasn’t until I gained the
             confidence that I decided to make the big leap to make this a
-            profession. That’s how the journey began. To make it short. I don’t
-            want to bore you with long paragraphs of text.
+            profession. That’s how the journey as a web developer began.
           </p>
         </section>
-        <h2 className={styles["about__title"]}>My Proficiencies</h2>
+        <h2 className={styles["about__title"]}>Skills</h2>
         <section className={styles["skills"]}>
           <Grid fluid>
             <Row center="md">
@@ -266,9 +263,6 @@ function About() {
         </section>
       </article>
       <div className={styles["workflow__main"]}>
-        <div className={styles["workflow__header"]}>
-          <h1>Workflow</h1>
-        </div>
         <div className={styles["workflow__grid"]}>
           <Grid fluid>
             <Row center="xs">
@@ -335,7 +329,8 @@ function About() {
                     <p>
                       The web application is now ready to be accessible to
                       everyone. Client will recieve a final run down before
-                      deploying. Afterwards it will be online for everybody.
+                      deploying. Afterwards, it will be online for everybody to
+                      view and enjoy.
                     </p>
                   </div>
                 </div>
