@@ -2,8 +2,9 @@ const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
+require("@babel/polyfill");
 module.exports = {
-  entry: "./src/index.js",
+  entry: ["@babel/polyfill", "./src/index.js"],
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "JS/[name].bundle.js",
@@ -12,7 +13,13 @@ module.exports = {
   devServer: {
     contentBase: "build",
     inline: false,
-    port: 3000
+    port: 3000,
+    historyApiFallback: true,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers":
+        "Origin, X-Requested-With, Content-Type, Accept"
+    }
   },
   module: {
     rules: [
