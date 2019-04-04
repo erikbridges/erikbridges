@@ -3,7 +3,7 @@
         "name": "Private Blog Application",
         "github_link": "https://github.com/MinimalistTraveler/blog-site",
         "internet_link": "https://private-blog-site.herokuapp.com/",
-        "image": "../../public/images/blog_site.png",
+        "image": "./public/images/blog_site.png",
         "coming_soon": false
     },
     {
@@ -11,7 +11,7 @@
         "name": "Todo List Login Application",
         "github_link": "https://github.com/MinimalistTraveler/todolist",
         "internet_link": "https://fathomless-caverns-68122.herokuapp.com/#/",
-        "image": "../../public/images/todolist_app.png",
+        "image": "./public/images/todolist_app.png",
         "coming_soon": false
     },
     {
@@ -19,7 +19,7 @@
         "name": "Face Detection",
         "github_link": "https://github.com/MinimalistTraveler/face-recongition",
         "internet_link": "https://smart-detection-app.herokuapp.com/",
-        "image": "../../public/images/face_recong.png",
+        "image": "./public/images/face_recong.png",
         "coming_soon": false
     },
     {
@@ -27,7 +27,7 @@
         "name": "Pizza Mania",
         "github_link": "https://github.com/MinimalistTraveler/pizza-mania",
         "internet_link": "https://erikbridges.github.io/pizza-mania/#",
-        "image": "../../public/images/pizza_mania.png",
+        "image": "./public/images/pizza_mania.png",
         "coming_soon": false
     },
     {

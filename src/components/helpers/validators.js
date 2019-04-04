@@ -1,5 +1,5 @@
 import validator from "validator";
-
+import axios from "axios";
 export const checkNames = name => {
   // Check if empty
   const emptyLength = validator.isEmpty(name);
@@ -34,27 +34,21 @@ export const checkEmail = async email => {
     };
   }
   // Check if the email is disposible.
-  try {
-    const emailValidate = await fetch(
-      `https://www.validator.pizza/email/${email}`
-    );
-    const { disposable } = await emailValidate.json();
-    if (disposable) {
-      return {
-        error: true,
-        errorMessage:
-          "No disposible emails are allowed. Please submit a valid email address."
-      };
-    }
-    return {
-      error: false
-    };
-  } catch (e) {
+  const isDisposible = await axios.get(
+    "https://open.kickbox.com/v1/disposable/" + email
+  );
+  const { disposable } = isDisposible.data;
+  if (disposable) {
     return {
       error: true,
-      errorMessage: "Something went wrong. Please try again."
+      errorMessage:
+        "Disposible emails are not allowed. Please enter a valid email address."
     };
   }
+  return {
+    error: false,
+    errorMessage: null
+  };
 };
 
 export const checkMessageField = field => {

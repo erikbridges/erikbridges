@@ -44,10 +44,18 @@ function Navbar() {
                 [styles["active"]]: state.active
               })}
             >
-              <Link to="/">Home</Link>
-              <Link to="/about">About</Link>
-              <Link to="/portfolio">Creations</Link>
-              <Link to="/contact">Contact</Link>
+              <Link to="/" onClick={() => toggleNav()}>
+                Home
+              </Link>
+              <Link to="/about" onClick={() => toggleNav()}>
+                About
+              </Link>
+              <Link to="/portfolio" onClick={() => toggleNav()}>
+                Creations
+              </Link>
+              <Link to="/contact" onClick={() => toggleNav()}>
+                Contact
+              </Link>
             </div>
           </nav>
         )

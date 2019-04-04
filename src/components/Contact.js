@@ -150,6 +150,7 @@ const Contact = () => {
             Please fill out the form and I will get back to you as soon as I
             can. Please allow 24 to 48 hours for me to respond.
           </p>
+          <p>Notice: </p>
         </div>
         {state.error ? (
           <div className={styles["error-box"]}>
@@ -205,7 +206,7 @@ const Contact = () => {
         </div>
         <div className={styles["form__wrap"]}>
           <ReCAPTCHA
-            sitekey="6LdADHYUAAAAAB41xfst4nl5SGma1hh68xKdY843"
+            sitekey="6LdRpJsUAAAAALyU0ffbzi5PSIExCe_JViKGjkz6"
             theme="dark"
             ref={recaptchaRef}
           />
@@ -218,7 +219,7 @@ const Contact = () => {
       <div className={styles["flex__area"]}>
         <div className={styles["contact__header"]}>
           <h2>Resume</h2>
-          <a href="../../public/assets/resume.pdf" download>
+          <a href="./public/assets/resume.pdf" download>
             <FontAwesomeIcon icon={faDownload} />
           </a>
           <div className={styles["decor"]}>
@@ -248,10 +249,15 @@ const Contact = () => {
             ) : state.processing ? (
               <div
                 style={{
-                  margin: "auto"
+                  margin: "0 auto",
+                  display: "grid",
+                  placeItems: "center"
                 }}
               >
-                <Loader type="CradleLoader" color="#FFF" />
+                <Loader type="TailSpin" color="#FFF" />
+                <h1 style={{ fontSize: "1rem", paddingTop: "20px" }}>
+                  Loading Please Wait...
+                </h1>
               </div>
             ) : (
               <Fragment>

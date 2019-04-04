@@ -11,16 +11,16 @@ module.exports = {
     publicPath: "/"
   },
   devServer: {
-    contentBase: "build",
-    inline: false,
+    inline: true,
     port: 3000,
-    historyApiFallback: true,
     headers: {
       "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
       "Access-Control-Allow-Headers":
-        "Origin, X-Requested-With, Content-Type, Accept"
+        "X-Requested-With, content-type, Authorization"
     }
   },
+  devtool: "source-map",
   module: {
     rules: [
       // Javascript Settings
@@ -42,12 +42,11 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         use: [
           {
-            loader: "url-loader",
+            loader: "file-loader",
             options: {
-              limit: 10000,
-              fallback: {
-                loader: "file-loader"
-              }
+              name: "[name].[ext]",
+              publicPath: "../public/fonts",
+              outputPath: "./public/fonts"
             }
           }
         ]
@@ -58,13 +57,9 @@ module.exports = {
           {
             loader: "url-loader",
             options: {
-              limit: 10000,
-              fallback: {
-                loader: "file-loader"
-              }
+              limit: 10000
             }
-          },
-          "img-loader"
+          }
         ]
       },
       // CSS Settings
@@ -109,9 +104,16 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-        from: "./public",
+        from: "./public/assets",
 
-        to: "public/[path]/[name].[ext]"
+        to: "public/assets/[name].[ext]"
+      }
+    ]),
+    new CopyWebpackPlugin([
+      {
+        from: "./public/images",
+
+        to: "public/images/[name].[ext]"
       }
     ]),
     new HtmlWebpackPlugin({
